@@ -12,4 +12,20 @@ export class HeroeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nombre: string = 'Ironman';
+  edad: number = 40;
+
+  
+  public get nombreCapitalizado() : string {
+    return this.nombre.toUpperCase();
+  }
+  
+  
+  obtenerNombre():string{
+    return `${ this.nombre} - ${this. edad}`;
+  }
+
+  cambiarNombre():void{
+    this.nombre = 'Spiderman';
+  }
 }

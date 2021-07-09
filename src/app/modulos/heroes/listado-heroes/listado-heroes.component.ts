@@ -9,7 +9,19 @@ export class ListadoHeroesComponent implements OnInit {
 
   constructor() { }
 
+  heroeBorrado : string = "";
+
   ngOnInit(): void {
+  }
+
+  heroes: string[] = ['Spiderman','Ironman','Hulk','Thor', 'Capitan America'];
+
+  borrarHeroe(pos:number):void{
+    if (this.heroes.length>0) {
+      this.heroeBorrado = this.heroes.splice(pos,1)[0];
+    }else{
+     this.heroeBorrado = ""; 
+    }
   }
 
 }
